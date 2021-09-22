@@ -35,7 +35,7 @@ elif( (a==7) and (b<5) ):
 elif((b==7) and (a<5)):
     print("el resultado es invalido")
 
-elif( (a==7) or (b==7)):
+elif( (a==7) and (b==7)):
     print("el resultado es invalido")
 
 else:
@@ -65,3 +65,76 @@ else:
 
 
 
+#---------------------------------------------------------------------
+
+print("-------------------------------------------")
+
+a=int(input("ingrese la cantidad de juegos del jugador a: "))
+b=int(input("ingrese la cantidad de juegos del jugador b: "))
+
+
+resultado_invalido=True
+
+#GANO EL JUGADOR A
+if(a==6) and (b<=4):
+    print("El ganador del set es el jugador A")
+    resultado_invalido=False
+
+else:
+    if(a==7) and (b==5):
+        print("El ganador del set es el jugador A")
+        resultado_invalido=False
+
+    else:
+
+
+        #GANO EL JUGADOR B
+        if(b==6) and (a<=4):
+            print("El ganador del set es el jugador B")
+            resultado_invalido=True
+        else:
+            if(b==7) and (a==5 or a==6):
+                print("El ganador del set es el jugador B")
+                resultado_invalido=False
+
+            else:
+#---------------------------------------------------------------------
+#RESULTADO INVALDO
+                
+                if(a>=8) or (b>=8):
+                    print("el resultado es invalido")
+
+                else:
+                        if (a==7) and((b<5) or (b==7)):
+                            print("el resultado es invalido")
+                        
+                        else:
+                            if(b==7) and ((a<5)or (a==7)):
+                                print("el resultado es invalido")
+
+                            else:
+                                print("el est todavia no termina")
+                #EL SET ESTA EN JUEGO
+
+                if(a<=5) and (b<=5):
+                    print("el set todavia no se termina")
+                    resultado_invalido=False
+
+                else:
+                    if(a==6) and (b==5):
+                        print("el set todavia no se termina")
+                        resultado_invalido=False
+                    
+                    else:
+                        if(a==5) and (b==6):
+                            print("el set todavia no se termina")
+                            resultado_invalido=False
+
+                        else:
+                            if(a==6) and (b==6):
+                                print("el set todavia no se termina")
+                                resultado_invalido=False
+
+                            else:
+                                resultado_invalido=True
+                                print("El resultado ingresado no es valido")

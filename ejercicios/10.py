@@ -10,7 +10,7 @@ segundos_ingresados=int(input("ingrese la cantidad de segundos"))
 
 
 segundos_mostrar=segundos_ingresados%60 
-#      15       =   196%60
+#      15       =   195%60
 minutos_ingresados= int(minutos_ingresados + ((segundos_ingresados-segundos_mostrar)/60))
 #      121=                        118+     (( 195    -   15)/60)
 minutos_mostrar=minutos_ingresados%60
