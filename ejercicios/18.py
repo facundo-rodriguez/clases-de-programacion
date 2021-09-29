@@ -64,5 +64,67 @@ for i in range(contador):
 
 '''
 
+#-----------------------------------
 
+'''
+
+def numeros():
+    
+    combinacion=""
+    digito=1
+
+    for i in range(4):
+        
+        print("ingrese el digito",digito,": ")
+        n=int(input(""))
+
+        while True:
+
+            if(n>9 or n<-9):
+                print("el numero no puede tener dos digitos, ingreselo nuevamente")
+
+                print("ingrese el digito",digito,": ")
+                n=int(input(""))
+
+            else:
+                break
+
+        n=str(n)
+        combinacion+=n
+
+        digito+=1
+
+    combinacion=int(combinacion)
+
+    return combinacion
+
+
+intentos=4
+
+llave=1234
+
+combinacion=numeros()
+
+while True:
+
+    if(combinacion==llave):
+        print("se abrio la caja fuerte")
+        break
+    
+    else:
+
+        intentos-=1
+
+        if(intentos==0):
+            print("perdio")
+            break
+
+        else:
+
+            print("lo siento, esa no es la combinacion, ingreselo nuevamente")
+            print("le quedan ",intentos," intentos")
+            
+            combinacion=numeros()
+
+'''
 
