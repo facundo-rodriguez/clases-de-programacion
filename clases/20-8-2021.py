@@ -75,7 +75,7 @@ colores.remove("Naranja")
 variable3= colores.count("Naranja")
 
 #Lo que estamos haciendo es buscar cuantas veces aparece Naranja,
-#luego pasamos al for esa cantidad gurdada en variable3 para que se repita esa cantidad de veces,
+#luego pasamos al for esa cantidad guardada en variable3 para que se repita esa cantidad de veces,
 #luego como el remove solo borra el primero que aparece, aca va a recorrer el array buscando y borrando al primero,
 #despues recorre otra vez buscando y borrando el elemento tantas veces como se encuentre en el array
 for i in range(variable3): 
