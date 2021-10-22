@@ -1,0 +1,79 @@
+//cuando la distacia esta entre 0 y 10 cm se prende los tres
+
+//entre 11 y 30 luz verde y amarilla
+
+//entre 31 y 50 las verde
+
+
+// HC-SR04 & ARDUINO -- AUTOMATISMOS MAR DEL PLATA
+ 
+#define ECHO 6        // Pin para recibir el pulso de eco6
+#define TRIGGER 7     // Pin para enviar el pulso de disparo7
+#define luz_roja 13
+#define luz_amarillo 12
+#define luz_verde 11
+
+
+ int tiempo, distancia;
+ // se crea una funcion denominada dist
+int dist(int distancia)
+{
+    digitalWrite(TRIGGER, LOW);
+    delayMicroseconds(2);
+    digitalWrite(TRIGGER, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(TRIGGER, LOW);
+    // Calcula la distancia midiendo el tiempo del estado alto del pin ECHO
+    tiempo = pulseIn(ECHO, HIGH);
+    // La velocidad del sonido es de 340m/s o 29 microsegundos por centimetro
+    distancia= tiempo/58;
+    return distancia;
+}
+void setup() {
+  Serial.begin(9600);
+  pinMode(ECHO, INPUT);
+  pinMode(TRIGGER, OUTPUT);
+  pinMode(luz_roja, OUTPUT);
+  pinMode(luz_amarillo, OUTPUT);
+  pinMode(luz_verde, OUTPUT);
+ 
+}
+ 
+void loop() {
+ 
+  //manda la distancia al monitor serie
+ 
+ 
+  Serial.print(dist(distancia));
+  Serial.println(" cm");
+  
+  if ( (dist(distancia)>=0) and ( dist(distancia)<=10) )
+  {
+  digitalWrite(luz_roja,HIGH);
+  digitalWrite(luz_amarillo,HIGH);
+  digitalWrite(luz_verde,HIGH);
+
+  
+  }
+  else
+  {
+    if( (dist(distancia)>=11)&&(dist(distancia)<=30)  ){
+      digitalWrite(luz_amarillo,HIGH);
+      digitalWrite(luz_verde,HIGH);
+
+      digitalWrite(luz_roja,LOW);
+
+      
+
+    }else{
+
+      digitalWrite(luz_amarillo,LOW);
+      digitalWrite(luz_verde,HIGH);
+        
+       digitalWrite(luz_roja,LOW);
+      
+      }
+  }
+  delay(200);
+ 
+}

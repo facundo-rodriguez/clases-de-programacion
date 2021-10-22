@@ -1,0 +1,15 @@
+Una compañia de seguros tiene en sus planes sacar un nuevo paquete de cobertura para la casa y/o oficina.
+Para lograr los objetivos de venta, debe realizar una campaña de marketing 
+personalizada a sus actuales clientes a partir de los datos que poseen de ellos. 
+Para una mejor administracion de la informacion, la misma fue gestionada de la siguiente manera:
+-nº de cliente
+-posee casa propia
+-posee un seguro de casa con otra compañia
+-posee oficina
+-posee seguro de oficina con otra compañia
+-ingresos brutos mensuales
+
+Para obtener una lista de posibles ventas, el sistema debe dar la opcion de ejecutar las siguientes consultas:
+-cantidad de clientes que poseen seguro de casa y/o oficina
+-el promedio de ingresos brutos mensuales de aquellos clientes que tienen seguro de casa contratado
+-el rango de ingresos brutos(maximo y minimo) de los clientes con casa propia

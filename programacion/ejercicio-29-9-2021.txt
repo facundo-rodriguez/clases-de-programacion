@@ -1,0 +1,5 @@
+escribir un programa que pida al usuario un numero y muestre por pantalla si es primo o no
+
+necesitamos mostrar un contador de 5 digitos(xxxxx), que muestre los numeros de 0 0 0 0 0 al 9 9 9 9 9 con 
+la particularidad que cada vez que aparezca
+un 3 lo sustituya por una E
