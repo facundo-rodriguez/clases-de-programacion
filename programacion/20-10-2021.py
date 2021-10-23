@@ -75,7 +75,7 @@ max_min=[]
 for i in range(len(clientes)):
 
     if(clientes[i][1]=="si"):
-
+ 
         max_min.append(clientes[i][-1])
 
 
@@ -105,7 +105,7 @@ print("el maximo de ingresos brutos es: ", max_min[0])
 
 max_min.sort()
 print(max_min)
-print("el maximo de ingresos brutos es: ", max_min[0])
+print("el minimo de ingresos brutos es: ", max_min[0])
 
                 
 
