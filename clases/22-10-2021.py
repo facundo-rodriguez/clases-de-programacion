@@ -78,7 +78,7 @@ cant_clientes=0
 while True:
     
     print("ingrese la consulta que desea")
-    print("1= cantidad de clientes que poseen seguto de casa y/o oficina")
+    print("1= cantidad de clientes que poseen seguro de casa y/o oficina")
     print("2-promedio de ingresos de aquellos que tienen seguro de casa contratado")
     print("3-rango de ingresos brutos de cliente con casa propia(maximo y minimo")
     print("4-terminar el programa")
