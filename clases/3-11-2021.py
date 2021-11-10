@@ -52,13 +52,13 @@ while True:
 
     opcion=int(input("quiere ingresar otra venta? presione 1-si o 2-no :"))
 
-    if(opcion!=1 and opcion!=2):
+    while(opcion!=1 and opcion!=2):
         opcion=int(input("quiere ingresar otra venta? presione 1-si o 2-no :"))
     
-    else:
-        if(opcion==2):
+    
+    if(opcion==2):
 
-            break
+        break
         
 
 #a
@@ -69,7 +69,7 @@ for i in range(len(factura)):
     cant_total_vend+=factura[i][4]
 
 
-#print("la cantidad total vendida es: ",cant_total_vend)
+print("la cantidad total vendida es: ",cant_total_vend)
 
 
 #      iva=(iva*ptf)/100
@@ -88,7 +88,7 @@ for i in range(len(factura)):
 
 promedio=importe_neto/(len(factura))
 
-#print("el promedio del importe neto de las facturas es: ", promedio)
+print("el promedio del importe neto de las facturas es: ", promedio)
 
 
 
@@ -112,7 +112,7 @@ for i in range(len(factura)):
         
             importe_total=factura[i][1]
 
-#print("el nro de factura con el importe mas grande es ",codigo_factura)
+print("el nro de factura con el importe mas grande es ",codigo_factura)
 
 
 
@@ -152,10 +152,10 @@ for i in range(len(factura)):
             precio=producto[i][0]
             codigo=producto[i][1]
 
-#print("el codigo del producto con el precio sin iva mas barato es: ",codigo)
+print("el codigo del producto con el precio sin iva mas barato es: ",codigo)
 
 
-    
+'''    
 
 #e
 
@@ -180,7 +180,7 @@ for i in range(len(factura)):
       
     clientes.append(clien_gasto)
 
-            
+'''            
 
 
 

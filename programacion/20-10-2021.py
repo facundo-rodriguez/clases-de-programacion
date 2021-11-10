@@ -70,7 +70,7 @@ clientes_seguros=0
 salario=0
 
 max_min=[]
-
+cantidad_seguro_casa=0
 
 for i in range(len(clientes)):
 
@@ -87,6 +87,8 @@ for i in range(len(clientes)):
         print(clientes_seguros)
 
         salario+=clientes[i][-1]
+
+        cantidad_seguro_casa+=1
 
     else:           
         if( clientes[i][4]=="si" ):
@@ -111,7 +113,7 @@ print("el minimo de ingresos brutos es: ", max_min[0])
 
 print("la cantidad de clientes con seguro es: ", clientes_seguros)
 
-promedio_salario=salario/clientes_seguros
+promedio_salario=salario/cantidad_seguro_casa
 print("el promedio de los salarios de los clientes con seguro de casa contratado es: ",promedio_salario)
 
 

@@ -33,9 +33,10 @@ dia_mes=0
 menor_cantidad=0
 for i in range(len(agua)):
 
-    if(menor_cantidad==0 and mayor_cantidad==0):
-        menor_cantidad=agua[i][0]
-        mayor_cantidad=agua[i][0]
+    if(menor_cantidad==0 and mayor_cantidad==0): #esta mal, es cuando i vale 0
+        menor_cantidad=agua[i][2]
+        mayor_cantidad=agua[i][2]
+        dia_mes=agua[i][0]
 
     else:
         if(agua[i][2]>mayor_cantidad):
